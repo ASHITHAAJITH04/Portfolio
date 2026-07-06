@@ -1,0 +1,64 @@
+<section id="resume">
+    <div class="container">
+
+        <h1>RESUME</h1>
+
+        <div class="row details">
+
+            <div class="col title">
+                <p>INTERNSHIPS</p>
+            </div>
+
+            <div class="col internships-list">
+                <div class="interns">
+                    @for (roles of internships; track roles.company ){
+                    <p class="role">{{ roles.role }}</p>
+                    <p class="company">{{ roles.company }} ({{ roles.duration }})</p>
+                    <ul class="contents">
+                        @for (point of roles.points; track point) {
+                        <li>{{ point }}</li>
+                        }
+                    </ul>
+                    }
+                </div>
+            </div>
+
+        </div>
+        <div class="row details pt-5">
+
+            <div class="col title">
+                <p>EDUCATION</p>
+            </div>
+
+            <div class="col education-list">
+                <div class="colleges">
+                    @for (clg of educations; track clg.college ){
+                    <p class="degree">{{ clg.degree }}</p>
+                    <p class="college">{{ clg.college }} ({{clg.duration}})</p>
+                    }
+                </div>
+            </div>
+
+        </div>
+        <div class="row pt-5">
+
+            <div class="col title">
+                <p>SKILLS</p>
+            </div>
+
+            <div class="col skills-list pb-5">
+                @for (skillGroup of skills; track skillGroup.category) {
+                <div class="skill-group">
+                    <p class="skill-category">{{ skillGroup.category }}</p>
+                    <div class="skill-tags">
+                        @for (item of skillGroup.items; track item) {
+                        <span class="skill-tag">{{ item }}</span>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>
