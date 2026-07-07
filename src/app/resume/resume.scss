@@ -63,3 +63,8 @@ h1{
   color: #3257c4;
   border: 1px solid #252C3D;
 }
+@media (max-width:768px){
+    .main{
+        padding: 0 5px !important;
+    }
+}
