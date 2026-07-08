@@ -50,3 +50,9 @@ footer {
   border-top: 1px solid #252C3D;
   padding-top: 24px;
 }
+@media(max-width:786px){
+    .footer-content , .footer-name{
+        display: flex;
+        justify-content: center !important;
+    }
+}
