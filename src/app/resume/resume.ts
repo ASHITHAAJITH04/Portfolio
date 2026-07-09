@@ -15,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class Resume implements AfterViewInit {
    ngAfterViewInit() {
+    setTimeout(() => {
     gsap.from('.interns', {
       scrollTrigger: {
         trigger: '.interns',
@@ -22,10 +23,13 @@ export class Resume implements AfterViewInit {
       },
       y: 60,         
       opacity: 0,
-      duration: 0.5,
+      duration: 0.7,
       stagger: 0.2,    
       ease: 'power2.out'
     });
+  },100);
+ 
+     setTimeout(() => {
     gsap.from('.colleges',{
        scrollTrigger: {
         trigger: '.colleges',
@@ -37,6 +41,9 @@ export class Resume implements AfterViewInit {
       stagger: 0.2,    
       ease: 'power2.out'
     });
+  },100);
+
+      setTimeout(() => {
      gsap.from('.skills-list',{
        scrollTrigger: {
         trigger: '.skills-list',
@@ -48,6 +55,7 @@ export class Resume implements AfterViewInit {
       stagger: 0.2,    
       ease: 'power2.out'
     });
+  },100);
 
   }
   internships = [
